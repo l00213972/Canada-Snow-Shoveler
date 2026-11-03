@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 6428129657745769551}
   - component: {fileID: 8407420641411926173}
   - component: {fileID: 1949491228763791779}
+  - component: {fileID: 4378819864189863216}
+  - component: {fileID: 8797263724631674176}
   m_Layer: 6
   m_Name: Snow
   m_TagString: Snow
@@ -131,7 +133,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -139,3 +141,44 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &4378819864189863216
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223307884197155509}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ef4ed261bb020a147923b33e0cc533fc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8797263724631674176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223307884197155509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8fbecc2e2d0bdc4a86e59b2f5ddcbcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SnowMechanic
+  snowLife: 4
+  Spr_: {fileID: 8407420641411926173}
+  IdleSnow: {fileID: 1266981738, guid: 062c1def634375e4a955709cea053720, type: 3}
+  SnowStage1: {fileID: 1336463869, guid: 062c1def634375e4a955709cea053720, type: 3}
+  SnowStage2: {fileID: -903190206, guid: 062c1def634375e4a955709cea053720, type: 3}
+  SnowStage3: {fileID: 749597491, guid: 062c1def634375e4a955709cea053720, type: 3}
+  box2d: {fileID: 1949491228763791779}

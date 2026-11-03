@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public LayerMask playerMask;
+    public int attack = 1;
 
     // Update is called once per frame
     void Update()
@@ -40,7 +41,7 @@ public class Player : MonoBehaviour
         }
         else if (hit.collider.CompareTag("Snow"))
         {
-            Debug.Log("Hit Snow");
+            AttackSnow(hit.collider);
         }
         else if (hit.collider.CompareTag("Wall"))
         {
@@ -68,7 +69,7 @@ public class Player : MonoBehaviour
         }
         else if (hit.collider.CompareTag("Snow"))
         {
-            Debug.Log("Hit Snow");
+            AttackSnow(hit.collider);
         }
         else if (hit.collider.CompareTag("Wall"))
         {
@@ -95,7 +96,7 @@ public class Player : MonoBehaviour
         }
         else if (hit.collider.CompareTag("Snow"))
         {
-            Debug.Log("Hit Snow");
+            AttackSnow(hit.collider);
         }
         else if (hit.collider.CompareTag("Wall"))
         {
@@ -122,7 +123,7 @@ public class Player : MonoBehaviour
         }
         else if (hit.collider.CompareTag("Snow"))
         {
-            Debug.Log("Hit Snow");
+            AttackSnow(hit.collider);
         }
         else if (hit.collider.CompareTag("Wall"))
         {
@@ -131,6 +132,21 @@ public class Player : MonoBehaviour
         else
         {
             Debug.Log("Hit: " + hit.collider.gameObject.name);
+        }
+    }
+
+    private void AttackSnow(Collider2D snowCollider)
+    {
+        SnowMechanic snow = snowCollider.GetComponent<SnowMechanic>();
+
+        if (snow != null)
+        {
+            Debug.Log("Calling ChopSnow!");
+            snow.ChopSnow(attack);
+        }
+        else
+        {
+            Debug.Log("SnowMechanic component not found!");
         }
     }
 }
