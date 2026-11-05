@@ -182,3 +182,6 @@ MonoBehaviour:
   SnowStage2: {fileID: -903190206, guid: 062c1def634375e4a955709cea053720, type: 3}
   SnowStage3: {fileID: 749597491, guid: 062c1def634375e4a955709cea053720, type: 3}
   box2d: {fileID: 1949491228763791779}
+  source: {fileID: 0}
+  shovelSFX: {fileID: 8300000, guid: 67ac6aa6cb3b4154dae01cc17adb8b02, type: 3}
+  breakSFX: {fileID: 8300000, guid: 67ac6aa6cb3b4154dae01cc17adb8b02, type: 3}

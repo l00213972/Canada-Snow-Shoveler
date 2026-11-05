@@ -137,6 +137,10 @@ public class Player : MonoBehaviour
 
     private void AttackSnow(Collider2D snowCollider)
     {
+        if (SnowCounter.SnowCollected >= SnowCounter.MaxSnow)
+            return; // Stop the Function Here
+
+
         SnowMechanic snow = snowCollider.GetComponent<SnowMechanic>();
 
         if (snow != null)
